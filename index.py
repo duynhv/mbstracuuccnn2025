@@ -18,7 +18,7 @@ st.markdown(
 
 # Tiêu đề chính
 st.markdown(
-    "<h1 style='text-align: center; color: #003366; font-size: 28px;'>KẾT QUẢ QUY ĐỔI CHỨNG CHỈ NGOẠI NGỮ, ĐIỂM CỘNG 2025</h1>",
+    "<h1 style='text-align: center; color: #003366; font-size: 35px;'>KẾT QUẢ QUY ĐỔI CHỨNG CHỈ NGOẠI NGỮ, ĐIỂM CỘNG 2025</h1>",
     unsafe_allow_html=True
 )
 
