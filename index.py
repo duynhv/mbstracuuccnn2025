@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="KẾT QUẢ QUY ĐỔI CHỨNG CHỈ NGOẠI NGỮ, ĐIỂM CỘNG 2025", layout="wide")
+st.set_page_config(page_title="KẾT QUẢ QUY ĐỔI CHỨNG CHỈ NGOẠI NGỮ, ĐIỂM CỘNG", layout="wide")
 st.markdown(
     """
     <div style="text-align: center;">
@@ -18,7 +18,7 @@ st.markdown(
 
 # Tiêu đề chính
 st.markdown(
-    "<h1 style='text-align: center; color: #003366;'>KẾT QUẢ QUY ĐỔI CHỨNG CHỈ NGOẠI NGỮ, ĐIỂM CỘNG 2025</h1>",
+    "<h1 style='text-align: center; color: #003366;'>KẾT QUẢ QUY ĐỔI CHỨNG CHỈ NGOẠI NGỮ, ĐIỂM CỘNG</h1>",
     unsafe_allow_html=True
 )
 
@@ -79,9 +79,9 @@ url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid=
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv(url, dtype={"Số ĐDCN": str})  # Ép đọc Số ĐDCN thành chuỗi
-    df.columns = df.columns.str.strip()  # bỏ khoảng trắng tên cột
-    df["Số ĐDCN"] = df["Số ĐDCN"].str.strip().str.upper()  # chuẩn hóa dữ liệu
+    df = pd.read_csv(url, dtype={"Số ĐDCN": str})  
+    df.columns = df.columns.str.strip() 
+    df["Số ĐDCN"] = df["Số ĐDCN"].str.strip().str.upper()
     return df
 
 df = load_data()
